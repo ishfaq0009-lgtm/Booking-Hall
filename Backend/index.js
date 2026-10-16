@@ -64,6 +64,10 @@ app.use((err, req, res, next) => {
   });
 });
 
+app.get(["/favicon.ico", "/favicon.png"], (_req, res) => {
+  res.status(204).end();
+});
+
 /* ===================== START ===================== */
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
